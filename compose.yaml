@@ -1,13 +1,9 @@
 services:
   api:
-    build:
-      context: backend
-      target: builder
+    image: jcoker91/nta-api
     ports:
       - "8000:8000"
   web:
-    build:
-      context: frontend
-      target: prod
+    image: jcoker91/nta-web
     ports:
       - "8080:80"
