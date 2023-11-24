@@ -1,0 +1,1 @@
+docker build . -t nta-api:dev && docker run -d --name nta-container --rm -p 8000:8000 nta-api:dev

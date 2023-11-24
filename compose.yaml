@@ -1,9 +1,15 @@
 services:
   api:
-    image: jcoker91/nta-api
+    image: jcoker91/nta-api:dev
     ports:
-      - "8000:8000"
+      - "8000:80"
+    env_file:
+      - .config/api.env.dev
   web:
-    image: jcoker91/nta-web
+    image: jcoker91/nta-web:dev
     ports:
-      - "8080:80"
+      - "80:80"
+    env_file:
+      - .config/frontend.env.dev
+    links:
+      - api
