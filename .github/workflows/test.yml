@@ -38,7 +38,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: rebase test branch
-        run: git rebase
+        run: git rebase main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 # jobs:
