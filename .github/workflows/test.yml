@@ -37,6 +37,10 @@ jobs:
         run: gh pr merge --auto --squash
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: rebase test branch
+        run: git rebase main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 # jobs:
 #   build:
 #     runs-on: ubuntu-latest
