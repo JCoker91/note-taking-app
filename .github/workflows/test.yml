@@ -30,6 +30,10 @@ jobs:
         run: gh pr create -B main -H test --title 'Merge test into main' --body 'Created by Github action'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: merge pull request
+        run: gh pr merge --auto --squash
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 # jobs:
 #   build:
 #     runs-on: ubuntu-latest
