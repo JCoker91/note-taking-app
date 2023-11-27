@@ -5,10 +5,9 @@
 
 name: Test
 on:
-  push:
-    branches: ["test"]
   pull_request:
     branches: ["test"]
+    types: closed
 jobs:
   build:
     runs-on: ubuntu-latest
