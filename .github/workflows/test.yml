@@ -22,6 +22,7 @@ jobs:
         working-directory: ./frontend/
         run: flutter test
   merge:
+    needs: build
     runs-on: ubuntu-latest
     permissions: write-all
     steps:
