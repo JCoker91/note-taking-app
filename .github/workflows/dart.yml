@@ -19,6 +19,7 @@ jobs:
         working-directory: ./frontend/
         run: flutter pub get
       - name: Run tests
+        working-directory: ./frontend/
         run: flutter test
 # jobs:
 #   build:
