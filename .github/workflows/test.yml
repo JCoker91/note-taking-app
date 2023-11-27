@@ -21,6 +21,15 @@ jobs:
       - name: Run tests
         working-directory: ./frontend/
         run: flutter test
+  merge:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: create pull request
+        run: gh pr create -B main -H test --title 'Merge test into main' --body 'Created by Github action'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 # jobs:
 #   build:
 #     runs-on: ubuntu-latest
