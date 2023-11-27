@@ -5,5 +5,9 @@ void main() {
     test('basic test', () {
       expect(1, 1);
     });
+
+    test('basic test 2', () {
+      expect(2, 2);
+    });
   });
 }
