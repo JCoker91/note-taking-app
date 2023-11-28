@@ -2,7 +2,7 @@ name: Test
 on:
   pull_request:
     branches: ["test"]
-    types: closed
+    types: opened
 jobs:
   frontend_tests:
     runs-on: ubuntu-latest
