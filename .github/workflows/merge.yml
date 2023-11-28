@@ -1,0 +1,21 @@
+name: merge
+on:
+  pull_request:
+    branches: ["test"]
+    types: closed
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    permissions: write-all
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: test
+      - name: create pull request
+        run: gh pr create -B main -H test --title 'Merge test into main' --body 'Created by Github action'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: merge pull request
+        run: gh pr merge --auto --squash
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
