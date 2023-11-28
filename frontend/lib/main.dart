@@ -36,7 +36,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   final List<Note> notes = [];
-
+  // Refreshes notes from the server
   void updateNotes() {
     Service.get('notes').then((response) {
       final data = response.body;
