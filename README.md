@@ -1,6 +1,6 @@
 # note-taking-app
 
-This repo is used to practice workflow, automation, and deployment techniques with a simple application.
+This repo is used to practice workflow, automation, and deployment techniques with a simple application. Hope this works...
 
 ## Front End
 
