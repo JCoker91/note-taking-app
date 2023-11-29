@@ -22,7 +22,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
-          context: backend/.
+          context: "{{defaultContext}}:backend"
           file: ./Dockerfile
           push: true
           tags: jcoker91/nta-api:dev
