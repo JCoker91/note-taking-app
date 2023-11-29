@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: test
+          ref: $GITHUB_HEAD_REF
       - uses: subosito/flutter-action@v2
       - name: Install dependencies
         working-directory: ./frontend/
@@ -23,7 +23,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: test
+          ref: $GITHUB_HEAD_REF
       - uses: actions/setup-python@v2
       - name: Install dependencies
         working-directory: ./backend/
