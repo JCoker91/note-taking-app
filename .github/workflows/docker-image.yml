@@ -19,11 +19,17 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-      - name: Build and push
+      - name: Build and push backend
         uses: docker/build-push-action@v5
         with:
           context: "{{defaultContext}}:backend"
           file: ./Dockerfile
           push: true
           tags: jcoker91/nta-api:dev
-    
+      - name: Build and push frontend
+        uses: docker/build-push-action@v5
+        with:
+          context: "{{defaultContext}}:frontend"
+          file: ./Dockerfile
+          push: true
+          tags: jcoker91/nta-web:dev
