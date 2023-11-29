@@ -1,7 +1,7 @@
 name: Test
 on:
   pull_request:
-    branches: ["test"]
+    branches: ["main"]
     types: opened
 jobs:
   frontend_tests:
@@ -37,4 +37,3 @@ jobs:
       - name: Run tests
         working-directory: ./backend/
         run: pytest
-
