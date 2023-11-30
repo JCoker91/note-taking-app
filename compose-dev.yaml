@@ -3,11 +3,9 @@ services:
     build:
       context: backend
       target: development
-      port: "8000:80"
   web:
     build:
       context: frontend
       target: development
-      ports: "80:80"
     depends_on: 
       - api
