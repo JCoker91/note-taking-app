@@ -8,6 +8,7 @@ from nta.models import Note
 def test_note_create():
     '''Tests Note model creation'''
     # Create dummy data
+    # this is dumb
     note = Note.objects.create(title="Test Note", content="Test Content")
     # Assert the dummy data saved as expected
     assert note.title == "Test Note"
