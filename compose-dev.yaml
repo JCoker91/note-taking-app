@@ -9,4 +9,5 @@ services:
       context: frontend
       target: development
       ports: "80:80"
-    depends_on: api
+    depends_on: 
+      - api
