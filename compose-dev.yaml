@@ -1,0 +1,12 @@
+services:
+  api:
+    build:
+      context: backend
+      target: development
+      ports: "8000:80"
+  web:
+    build:
+      context: frontend
+      target: development
+      ports: "80:80"
+    depends_on: api
