@@ -3,7 +3,7 @@ services:
     build:
       context: backend
       target: development
-      ports: "8000:80"
+      port: "8000:80"
   web:
     build:
       context: frontend
